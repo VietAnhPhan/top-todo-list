@@ -2,7 +2,6 @@ import Project from "./project";
 import Todo from "./todo";
 import { format } from "date-fns";
 import { projectListDOM } from "./projectListDOM";
-import { projectManager } from "./projectManager";
 import { todoListDOM } from "./todoListDOM";
 
 class ModalDOM {
@@ -234,46 +233,8 @@ class ModalDOM {
     this.editTodoDueDate.value = format(todo.dueDate, "yyyy-MM-dd");
     this.isEditTodoPriority.checked = todo.priority;
 
-    // console.log(fillStarButton);
-
-    // const handleTodoBtn = (event) => {
-    //     event.preventDefault();
-
-    //     args.todo.title = this.todoTitle.value;
-    //     args.todo.description = this.todoDescription.value;
-    //     args.todo.dueDate = this.todoDueDate.value;
-    //     args.todo.priority = this.isTodoPriority.checked;
-
-    //     args.el.querySelector(".todo__title").textContent = args.todo.title;
-    //     args.el.querySelector(".todo__priority").src = args.todo.priority ? args.fill_star : args.hollow_star;
-
-    //     this.todoBtn.removeEventListener("click", handleTodoBtn);
-    //     this.todoForm.reset();
-    //     this.todoDialog.close();
-    // }
-
-    // this.todoBtn.addEventListener("click", handleTodoBtn);
-
     this.editTodoDialog.showModal();
   }
-
-  addProject(event) {}
-
-  // addTodo(onAddProject, event) {
-  //     event.preventDefault();
-
-  //     const newTodo = new Todo(
-  //         this.todoTitle.value,
-  //         this.todoDescription.value,
-  //         this.todoDueDate.value,
-  //         this.isTodoPriority.checked
-
-  //     );
-
-  //     onAddProject(newTodo)
-
-  //     this.todoDialog.close();
-  // }
 }
 
 export const modalDOM = new ModalDOM();

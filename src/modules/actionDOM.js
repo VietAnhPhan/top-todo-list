@@ -1,4 +1,4 @@
-import { compareAsc, compareDesc } from "date-fns";
+import { compareDesc } from "date-fns";
 import { format } from "date-fns";
 import { modalDOM } from "./modalDOM";
 import { projectManager } from "./projectManager";

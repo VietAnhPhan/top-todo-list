@@ -1,7 +1,7 @@
 import fillStarButton from "../../assets/icons/star-fill.svg";
 import hollowStarButton from "../../assets/icons/star-hollow.svg";
 import deleteButton from "../../assets/icons/rubbish-bin.svg";
-import ModalDOM, { modalDOM } from "./modalDOM";
+import { modalDOM } from "./modalDOM";
 import { projectManager } from "./projectManager";
 
 class TodoListDOM {
@@ -102,33 +102,14 @@ class TodoListDOM {
         );
       });
 
-      li.addEventListener("click", (event) => {
+      li.addEventListener("click", () => {
         projectManager.setTodoSelectedIndex(project.todos.indexOf(todo));
         modalDOM.openEditTodo(todo);
-        // this.modalUI.openEditTodo({
-        //     todo: todo,
-        //     el: event.currentTarget,
-        //     hollow_star: hollowStarButton,
-        //     fill_star: fillStarButton
-        // });
       });
 
       deleteTodoBtn.addEventListener("click", (event) => {
         event.stopPropagation();
         this.deleteTodo(project.todos.indexOf(todo));
-        // const updatedProjectIndex=li.getAttribute('data-index');
-        // this.project.todos.splice(this.project.todos.indexOf(todo), 1);
-        // this.projects = this.projects.map((project,index)=>{
-        //     if(index == updatedProjectIndex){
-        //         return {
-        //             ...project,
-        //             todos:  this.project.todos
-        //         }
-        //     }
-        // });
-
-        // localStorage.setItem("projects", JSON.stringify(this.projects));
-        // li.remove();
       });
 
       li.append(
