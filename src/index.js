@@ -1,5 +1,5 @@
 import "./style.css";
-import Project from "./modules/project";
+// import Project from "./modules/project";
 import MainDOM from "./modules/mainDOM";
 
 const projects = [
@@ -42,4 +42,4 @@ const projects = [
   new Project("Retreat Plan"),
 ];
 
-const mainDOM = new MainDOM(projects);
+new MainDOM();

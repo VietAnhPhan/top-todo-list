@@ -15,7 +15,6 @@ class ProjectListDOM {
 
     this.deleteIcon = deleteIcon;
 
-    this.init();
     this.render();
   }
 
